@@ -30,11 +30,7 @@
             onblur="this.type='text'"
             id="to-do-date"
             class="input" />
-<<<<<<< HEAD
           <button id="add-button" class="add-button">Add</button>
-=======
-          <button class="add-button">Add</button>
->>>>>>> faf265e3f2341470217797e7239920dd4debc200
         </div>
         <div
           id="filter"
@@ -55,7 +51,50 @@
         </div>
       </div>
     </div>
-    <div id="table"></div>
+    <div id="table" class="table-container">
+      <table class="table-auto w-[100%] md:w-[95%] text-center ">
+        <thead >
+          <tr class="*:border-2 *:border-collapse *:border-fuchsia-900 rounded-lg">
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="todo-list" class="*:border-2 *:border-collapse *:border-fuchsia-900">
+          <tr class="*:border-2 *:border-collapse *:border-fuchsia-900">
+            <td>text</td>
+            <td>date</td>
+            <td>status</td>
+            <td >
+              <button>Edit</button>
+              <button>Do</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr class="*:border-2 *:border-collapse *:border-fuchsia-900">
+            <td>text</td>
+            <td>date</td>
+            <td>status</td>
+            <td>
+              <button>Edit</button>
+              <button>Do</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr class="*:border-2 *:border-collapse *:border-fuchsia-900">
+            <td>text</td>
+            <td>date</td>
+            <td>status</td>
+            <td>
+              <button>Edit</button>
+              <button>Do</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <script src="./js/app.js"></script>
   </body>
 </html>

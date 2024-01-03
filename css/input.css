@@ -10,6 +10,11 @@
         top-12 left-[4%] md:left-[20%] flex flex-wrap justify-center
         gap-10 items-center shadow-box rounded-2xl;
   }
+  .table-container {
+    @apply min-h-20 w-11/12 md:w-3/5 p-4 bg-slate-300 absolute 
+         left-[4%] md:left-[20%] flex flex-wrap justify-center
+        gap-10 items-center shadow-box rounded-2xl top-[90%] md:top-[55%];
+  }
 }
 @layer components {
   .input {
