@@ -40,3 +40,30 @@
     @apply bg-red-700 text-white  px-5 py-2 rounded-xl hover:bg-red-600 transition-colors duration-150;
   }
 }
+table {
+  @apply border-2 border-fuchsia-800;
+}
+thead {
+  @apply bg-fuchsia-800 text-white;
+}
+tbody tr {
+  @apply h-10;
+}
+tbody tr:nth-child(odd) {
+  @apply bg-fuchsia-50;
+}
+tbody tr:nth-child(even) {
+  @apply bg-transparent;
+}
+td button {
+  @apply px-2 rounded-md;
+}
+td button:nth-child(1) {
+  @apply bg-amber-500;
+}
+td button:nth-child(2) {
+  @apply bg-teal-600;
+}
+td button:nth-child(3) {
+  @apply bg-red-500;
+}
