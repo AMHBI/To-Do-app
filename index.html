@@ -9,30 +9,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body class="bg-back-grad min-h-screen font-vazir">
-    <div class="relative">
+
+  <body
+    class="bg-back-grad min-h-screen font-vazir max-w-screen-sm md:max-w-screen-2xl">
+    <div id="parent-form-container" class="relative">
       <div class="form-container">
-        <p class="basis-full text-center">ToDo App | AMHB</p>
-        <div id="inputs" class="w-full flex justify-between">
+        <p class="basis-full text-center font-mono text-xl md:text-3xl">
+          ToDo App | AMHB
+        </p>
+        <div id="inputs" class="input-wraper">
           <input
             type="text"
             placeholder="Write a To Do... "
             id="to-do-name"
-            class="basis-5/12" />
+            class="input" />
           <input
-            type="date"
+            type="text"
             placeholder="choose a date..."
+            onfocus="this.type='date'"
+            onblur="this.type='text'"
             id="to-do-date"
-            class="basis-5/12" />
-          <button>Add</button>
+            class="input" />
+          <button class="add-button">Add</button>
         </div>
-        <div id="filter" class="w-full flex justify-between">
-          <div>
-            <button>All</button>
-            <button>Pending</button>
-            <button>Completed</button>
+        <div
+          id="filter"
+          class="w-full flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+          <div
+            id="filter-container"
+            class="flex flex-wrap md:flex-nowrap gap-2 md:gap-4 items-center">
+            <p class="basis-[100%] text-center text-fuchsia-950">Filter :</p>
+            <button class="filter-buttons" data-filter="all">All</button>
+            <button class="filter-buttons" data-filter="pending">
+              Pending
+            </button>
+            <button class="filter-buttons" data-filter="completed">
+              Completed
+            </button>
           </div>
-          <button>Delete All</button>
+          <button id="delete-button" class="delete-button">Delete All</button>
         </div>
       </div>
     </div>
