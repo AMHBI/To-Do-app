@@ -10,6 +10,12 @@
         top-12 left-[4%] md:left-[20%] flex flex-wrap justify-center
         gap-10 items-center shadow-box rounded-2xl;
   }
+  .alert-container {
+    @apply  w-11/12 md:w-3/5 p-1 absolute 
+        top-[83%] md:top-[48%] left-[4%] md:left-[20%] flex flex-wrap justify-center
+        gap-10 items-center  rounded-2xl;
+  }
+  
   .table-container {
     @apply min-h-20 w-11/12 md:w-3/5 p-4 bg-slate-300 absolute 
          left-[4%] md:left-[20%] flex flex-wrap justify-center
@@ -66,4 +72,10 @@ td button:nth-child(2) {
 }
 td button:nth-child(3) {
   @apply bg-red-500;
+}
+.alert-success{
+  @apply bg-green-500 text-white shadow-box
+}
+.alert-error{
+  @apply bg-red-500 text-white shadow-box
 }

@@ -13,7 +13,7 @@
   <body
     class="bg-back-grad min-h-screen font-vazir max-w-screen-sm md:max-w-screen-2xl">
     <div id="parent-form-container" class="relative">
-      <div class="form-container">
+      <div id="form-container" class="form-container">
         <p class="basis-full text-center font-mono text-xl md:text-3xl">
           ToDo App | AMHB
         </p>
@@ -51,48 +51,20 @@
         </div>
       </div>
     </div>
-    <div id="table" class="table-container">
-      <table class="border-spacing-2 w-[100%] md:w-[95%] text-center ">
-        <thead >
-          <tr class=" rounded-lg">
+    <div id="alert" class="alert-container">
+      <p></p>
+    </div>
+    <div id="table" class="table-container z-10">
+      <table class="border-spacing-2 w-[100%] md:w-[95%] text-center">
+        <thead>
+          <tr class="rounded-lg">
             <th>Task</th>
             <th>Due Date</th>
             <th>Status</th>
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody id="todo-list" >
-          <tr>
-            <td>text</td>
-            <td>date</td>
-            <td>status</td>
-            <td >
-              <button>Edit</button>
-              <button>Do</button>
-              <button>Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>text</td>
-            <td>date</td>
-            <td>status</td>
-            <td>
-              <button>Edit</button>
-              <button>Do</button>
-              <button>Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>text</td>
-            <td>date</td>
-            <td>status</td>
-            <td>
-              <button>Edit</button>
-              <button>Do</button>
-              <button>Delete</button>
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="todo-list"></tbody>
       </table>
     </div>
     <script src="./js/app.js"></script>
