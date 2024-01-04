@@ -33,9 +33,6 @@
   .add-button {
     @apply bg-green-600 hover:bg-green-800 w-[100%] md:w-fit text-white px-10 py-1 rounded-2xl text-lg transition-colors duration-200;
   }
-  .edit-button {
-    @apply bg-amber-700 hover:bg-amber-900 w-[100%] md:w-fit text-white px-10 py-1 rounded-2xl text-lg transition-colors duration-200;
-  }
   .filter-buttons {
     @apply bg-fuchsia-800 hover:bg-fuchsia-600 transition-colors duration-200 text-white text-sm md:text-lg w-fit px-4 py-1 rounded-lg;
   }
@@ -45,6 +42,12 @@
   .delete-button {
     @apply bg-red-700 text-white  px-5 py-2 rounded-xl hover:bg-red-600 transition-colors duration-150;
   }
+}
+.edit-button {
+  @apply bg-amber-700 hover:bg-amber-900 hidden w-[100%] md:w-fit text-white px-10 py-1 rounded-2xl text-lg transition-colors duration-200;
+}
+.edit-button-hidden{
+  @apply hidden
 }
 table {
   @apply border-2 border-slate-200 border-t-0
@@ -78,4 +81,10 @@ td button:nth-child(3) {
 }
 .alert-error{
   @apply bg-red-500 text-white shadow-box
+}
+.alert-warning{
+  @apply bg-amber-500 text-white shadow-box
+}
+.alert-info{
+  @apply bg-sky-700 text-white shadow-box
 }
