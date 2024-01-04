@@ -4,9 +4,10 @@ const addButton = document.getElementById("add-button");
 const editButton = document.getElementById("edit-button");
 const deleteAll = document.getElementById("delete-all-button");
 const alertContainer = document.getElementById("alert");
+const filterButtons = document.querySelectorAll(".filter-buttons");
 const alertTag = alertContainer.children[0];
 const todosBody = document.querySelector("tbody");
-
+filterButtons.forEach((item) => console.log(item));
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
 const generateId = () => {
@@ -16,7 +17,6 @@ const generateId = () => {
 const saveToLocalStorage = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 };
-
 const showAlert = (message, type) => {
   alertTag.innerText = "";
   alertTag.classList = "";
@@ -27,12 +27,13 @@ const showAlert = (message, type) => {
     alertTag.innerText = "";
   }, 3000);
 };
-const showTodos = () => {
+const showTodos = (data) => {
+  const todoList = data || todos;
   todosBody.innerHTML = "";
   if (!todos.length) {
     todosBody.innerHTML = "<tr><td colspan='4'>No task found</td></tr>";
   }
-  todos.forEach((todo) => {
+  todoList.forEach((todo) => {
     todosBody.innerHTML += `
         <tr>
             <td>${todo.task}</td>
@@ -112,7 +113,28 @@ const editButtonHandler = (event) => {
   showTodos();
   showAlert("Task Updated successfully", "success");
 };
-window.addEventListener("load", showTodos);
+const filterHandler = (event) => {
+  let filteredTodos = null;
+  const filter = event.target.dataset.filter;
+  switch (filter) {
+    case "pending":
+      filteredTodos = todos.filter((todo) => todo.isCompleted == false);
+      break;
+    case "completed":
+      filteredTodos = todos.filter((todo) => todo.isCompleted == true);
+      break;
+
+    default:
+      filteredTodos = todos;
+      break;
+  }
+
+  showTodos(filteredTodos);
+};
+window.addEventListener("load", () => showTodos());
 addButton.addEventListener("click", addHandler);
 deleteAll.addEventListener("click", deleteAllHandler);
 editButton.addEventListener("click", editButtonHandler);
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", filterHandler);
+});

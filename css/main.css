@@ -924,6 +924,22 @@ tbody tr:nth-child(even) {
   background-color: transparent;
 }
 
+tbody tr td:nth-child(1) {
+  width: 40%;
+}
+
+tbody tr td:nth-child(2) {
+  width: 15%;
+}
+
+tbody tr td:nth-child(3) {
+  width: 10%;
+}
+
+tbody tr td:nth-child(4) {
+  width: 35%;
+}
+
 td button {
   border-radius: 0.375rem;
   padding-left: 0.75rem;
@@ -938,6 +954,7 @@ td button:nth-child(1) {
 }
 
 td button:nth-child(2) {
+  width: 20%;
   --tw-bg-opacity: 1;
   background-color: rgb(13 148 136 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -998,6 +1015,10 @@ td button:nth-child(3) {
 
   .md\:max-w-screen-2xl {
     max-width: 1536px;
+  }
+
+  .md\:basis-auto {
+    flex-basis: auto;
   }
 
   .md\:flex-row {

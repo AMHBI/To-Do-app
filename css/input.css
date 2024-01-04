@@ -64,6 +64,19 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
   @apply bg-transparent;
 }
+tbody tr td:nth-child(1) {
+ @apply w-2/5
+}
+tbody tr td:nth-child(2) {
+ @apply w-[15%]
+}
+tbody tr td:nth-child(3) {
+ @apply w-[10%]
+}
+tbody tr td:nth-child(4) {
+ @apply w-[35%]
+}
+
 td button {
   @apply px-3 py-px rounded-md;
 }
@@ -71,7 +84,7 @@ td button:nth-child(1) {
   @apply bg-amber-500;
 }
 td button:nth-child(2) {
-  @apply bg-teal-600 text-white;
+  @apply bg-teal-600 text-white w-1/5 ;
 }
 td button:nth-child(3) {
   @apply bg-red-500 text-white; 
