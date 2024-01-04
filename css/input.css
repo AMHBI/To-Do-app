@@ -47,7 +47,7 @@
   }
 }
 table {
-  @apply border-2 border-fuchsia-800;
+  @apply border-2 border-slate-200 border-t-0
 }
 thead {
   @apply bg-fuchsia-800 text-white;
@@ -56,22 +56,22 @@ tbody tr {
   @apply h-10;
 }
 tbody tr:nth-child(odd) {
-  @apply bg-fuchsia-50;
+  @apply bg-slate-200;
 }
 tbody tr:nth-child(even) {
   @apply bg-transparent;
 }
 td button {
-  @apply px-2 rounded-md;
+  @apply px-3 py-px rounded-md;
 }
 td button:nth-child(1) {
   @apply bg-amber-500;
 }
 td button:nth-child(2) {
-  @apply bg-teal-600;
+  @apply bg-teal-600 text-white;
 }
 td button:nth-child(3) {
-  @apply bg-red-500;
+  @apply bg-red-500 text-white; 
 }
 .alert-success{
   @apply bg-green-500 text-white shadow-box

@@ -38,9 +38,11 @@ const showTodos = () => {
             <td>${todo.date || "No Date Seted"}</td>
             <td>${todo.isCompleted ? "Completed" : "Pending"}</td>
             <td>
-            <button onclick=''>Edit</button>
-            <button onclick=''>Do</button>
-            <button onclick=''>Delete</button>
+            <button onclick='editHandler(${todo.id})'>Edit</button>
+            <button onclick='completeStatusHandler(${todo.id})'>
+                ${todo.isCompleted ? "Undo" : "Do"}
+            </button>
+            <button onclick='deleteTodoHandler(${todo.id})'>Delete</button>
             </td>
         </tr>
         `;
@@ -74,6 +76,13 @@ const deleteAllHandler = () => {
   showTodos();
   showAlert("All tasks deleted Successfully", "success");
 };
+const completeStatusHandler = (id) =>{
+    const todo = todos.find((todo)=> todo.id === id);
+    todo.isCompleted = !todo.isCompleted
+    saveToLocalStorage()
+    showTodos()
+    showAlert("Status Changed Successfully","success")
+}
 window.addEventListener("load", showTodos);
 addButton.addEventListener("click", addHandler);
 deleteAll.addEventListener("click", deleteAllHandler);
