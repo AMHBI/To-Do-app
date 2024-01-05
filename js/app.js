@@ -40,11 +40,19 @@ const showTodos = (data) => {
             <td>${todo.date || "No Date Seted"}</td>
             <td>${todo.isCompleted ? "Completed" : "Pending"}</td>
             <td>
-            <button onclick='editTodoHandler(${todo.id})'>Edit</button>
-            <button onclick='completeStatusHandler(${todo.id})'>
-                ${todo.isCompleted ? "Undo" : "Do"}
+            <button onclick='editTodoHandler(${todo.id})'>Edit
+            <img src="./assets/icons/edit.svg" />
             </button>
-            <button onclick='deleteTodoHandler(${todo.id})'>Delete</button>
+            <button onclick='completeStatusHandler(${todo.id})'>
+                ${
+                  todo.isCompleted
+                    ? "Undo <img src='./assets/icons/undo.svg' />"
+                    : "Do <img src='./assets/icons/checked.svg'/>"
+                }
+            </button>
+            <button onclick='deleteTodoHandler(${todo.id})'>Delete
+            <img src='./assets/icons/delete.svg' />
+            </button>
             </td>
         </tr>
         `;
@@ -138,3 +146,8 @@ editButton.addEventListener("click", editButtonHandler);
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", filterHandler);
 });
+taskInput.addEventListener("keypress",e=>{
+  if(e.code === "Enter" || e.code ==="NumpadEnter"){
+    addHandler()
+  }
+})

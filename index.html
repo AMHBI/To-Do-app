@@ -30,8 +30,13 @@
             onblur="this.type='text'"
             id="to-do-date"
             class="input" />
-          <button id="add-button" class="add-button">Add</button>
-          <button id="edit-button" class="edit-button">Edit</button>
+          <button id="add-button" class="add-button flex items-center gap-2">Add
+            <img src="./assets/icons/add.svg" alt="add icon">
+          </button>
+          <button id="edit-button" class="edit-button flex items-center gap-2">Edit
+            <img src="./assets/icons/edit.svg" class="-mt-2" alt="edit icon">
+
+          </button>
         </div>
         <div
           id="filter"
@@ -42,16 +47,22 @@
             <div
             id="filter-container"
             class="flex flex-wrap md:flex-nowrap gap-2 md:gap-4 items-center">
-            <button class="filter-buttons" data-filter="all">All</button>
+            <button class="filter-buttons flex items-center gap-2" data-filter="all">All
+              <img src="./assets/icons/clipboard.svg" alt="">
+            </button>
             <button class="filter-buttons" data-filter="pending">
               Pending
+              <img src="./assets/icons/hourglass.svg" alt="">
             </button>
             <button class="filter-buttons" data-filter="completed">
               Completed
+              <img src="./assets/icons/checked.svg" class="-mt-1" alt="">
             </button>
           </div>
         </div>
-          <button id="delete-all-button" class="delete-button">Delete All</button>
+          <button id="delete-all-button" class="delete-button flex items-center gap-3">Delete All
+            <img src="./assets/icons/delete.svg" alt="delete all button" />
+          </button>
         </div>
       </div>
     </div>
