@@ -81,10 +81,14 @@ const addHandler = () => {
   }
 };
 const deleteAllHandler = () => {
-  todos = [];
-  saveToLocalStorage();
-  showTodos();
-  showAlert("All tasks deleted Successfully", "success");
+  if (!todos.length) {
+    showAlert("No Task to delete", "error");
+  } else {
+    todos = [];
+    saveToLocalStorage();
+    showTodos();
+    showAlert("All tasks deleted Successfully", "success");
+  }
 };
 const completeStatusHandler = (id) => {
   const todo = todos.find((todo) => todo.id === id);
@@ -146,8 +150,8 @@ editButton.addEventListener("click", editButtonHandler);
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", filterHandler);
 });
-taskInput.addEventListener("keypress",e=>{
-  if(e.code === "Enter" || e.code ==="NumpadEnter"){
-    addHandler()
+taskInput.addEventListener("keypress", (e) => {
+  if (e.code === "Enter" || e.code === "NumpadEnter") {
+    addHandler();
   }
-})
+});
