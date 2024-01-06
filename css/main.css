@@ -445,9 +445,10 @@ video {
 }
 
 .form-container {
-  position: absolute;
-  top: 3rem;
-  left: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   min-height: 5rem;
   width: 91.666667%;
@@ -466,17 +467,18 @@ video {
 
 @media (min-width: 768px) {
   .form-container {
-    left: 20%;
+    margin-right: 20%;
     max-width: 60%;
     padding: 3rem;
   }
 }
 
 .alert-container {
-  position: absolute;
-  top: 73%;
-  left: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
   display: flex;
+  min-height: 2rem;
   width: 91.666667%;
   flex-wrap: wrap;
   align-items: center;
@@ -488,16 +490,13 @@ video {
 
 @media (min-width: 768px) {
   .alert-container {
-    top: 42.5%;
-    left: 20%;
     max-width: 58%;
   }
 }
 
 .table-container {
-  position: absolute;
-  left: 4%;
-  top: 80%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   min-height: 5rem;
   width: 91.666667%;
@@ -516,15 +515,13 @@ video {
 
 @media (min-width: 768px) {
   .table-container {
-    left: 20%;
-    top: 50%;
     width: 60%;
   }
 }
 
 @media (min-width: 1280px) {
   .table-container {
-    max-width: 58%;
+    max-width: 60%;
   }
 }
 
@@ -765,12 +762,13 @@ video {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
-.relative {
-  position: relative;
-}
-
 .z-10 {
   z-index: 10;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .-mt-1 {
@@ -952,6 +950,16 @@ tbody tr:nth-child(even) {
   background-color: transparent;
 }
 
+tbody tr td:nth-child(4) {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  tbody tr td:nth-child(4) {
+    flex-direction: row;
+  }
+}
+
 tbody tr td:nth-child(1) {
   width: 40%;
 }
@@ -983,14 +991,21 @@ td button {
 }
 
 td button:nth-child(1) {
+  width: 70%;
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 768px) {
+  td button:nth-child(1) {
+    width: 27%;
+  }
+}
+
 td button:nth-child(2) {
-  width: 25%;
+  width: 70%;
   justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(13 148 136 / var(--tw-bg-opacity));
@@ -999,11 +1014,25 @@ td button:nth-child(2) {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 768px) {
+  td button:nth-child(2) {
+    width: 27%;
+  }
+}
+
 td button:nth-child(3) {
+  width: 75%;
+  justify-content: center;
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  td button:nth-child(3) {
+    width: 27%;
+  }
 }
 
 td button img {
